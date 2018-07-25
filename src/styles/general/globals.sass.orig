@@ -1,0 +1,243 @@
+@import fonts
+@import color-palette
+@import variables
+@import mixins
+@import breakpoint-sass
+
+*
+    font-family: $font-stack
+    box-sizing: border-box
+    text-decoration: none
+    line-height: 1.5
+    letter-spacing: normal
+    font-stretch: normal
+    font-weight: $font-light
+
+.clearfix
+    &::after
+        content: ""
+        clear: both
+        display: table
+
+html
+    height: 100%
+body
+    font-family: $font-stack
+    color: $white-four
+    background-color: $white-four
+    max-height: 100%
+    height: 100%
+
+h2
+    font-size: 2.5rem
+    font-weight: $font-light
+    margin: 20px 0
+    padding-right: 0px
+    overflow-wrap: break-word
+    @include breakpoint($x-xs)
+        font-size: 2rem
+    @include breakpoint($sm-m)
+        font-size: 2.25rem
+    @include breakpoint($md)
+        font-size: 2.5rem
+    //@include breakpoint($sm)
+        font-size: 2rem
+        margin: 15px 0
+
+    b
+        font-weight: $font-medium
+    span
+        color: $white-four-50
+
+h3
+    font-size: 1.5rem
+    font-weight: $font-light
+    margin: 20px 0
+    padding-right: 30px
+    overflow-wrap: break-word
+    //@include breakpoint($sm)
+        font-size: 1.25rem
+        margin: 15px 0
+        padding: 0
+<<<<<<< HEAD
+=======
+    @include breakpoint($x-xs)
+        font-size: 1.15rem
+    @include breakpoint($sm-mid)
+        font-size: 1.25rem
+    @include breakpoint($md)
+        font-size: 1.5rem
+>>>>>>> responsive
+
+    &.white-title
+        color: $white-four
+    &.white-80-title
+        color: $white-four-75
+
+ul
+    list-style: none
+
+a
+    text-decoration: none
+    display: inline-block
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    color: $white-four-50
+    cursor: pointer
+
+    &:hover
+        text-decoration: none
+        color: $white-four
+    &.link-blue
+        color: $bluegreen-2
+        font-weight: $font-medium
+        margin: 1rem 0
+        &:hover
+            color: $bluegreen
+p
+    font-weight: $font-light
+    line-height: 1.75
+    color: #404040
+    font-size: 1rem
+
+    &.story-emphasis, &.solution-emphasis
+        font-family: $font-decorated
+        color: $white-four
+        font-size: 4rem
+        line-height: 4rem
+        max-width: 100%
+        overflow: hidden
+        @include breakpoint($sm)
+            font-size: 3rem
+            font-weight: 3rem
+        span
+            font-size: 2.25rem
+            font-family: $font-decorated
+            font-weight: $font-light
+
+            @include breakpoint($sm)
+                font-size: 2rem
+
+
+img
+    width: 100%
+section
+    display: block
+    height: 100%
+
+a.btn, button.btn
+    font-size: .75rem
+    line-height: .75rem
+    font-weight: $font-medium
+    min-height: 42px
+    border-radius: 2px
+    padding: 0 15px
+    margin: auto 5px
+    @include transition()
+
+    @include breakpoint($sm)
+        min-width: 60px
+
+    &-mid-size
+        min-width: 127px
+    &-dark
+        background-color: $dark
+        border: solid 1.5px $white-four-50
+        color: $white-four
+        &:hover
+            background-color: $darker
+            border: solid 1.5px $white-four-50
+            color: $white-four
+
+
+    &-bluegreen
+        background-color: $bluegreen-2
+        border: solid 1.5px $teal
+        color: $white-four
+        &:hover
+            border: solid 1.5px $teal
+            color: $white-four
+            background-color: $bluegreen
+
+.wrapper
+    padding: $paddingU 10%
+    max-width: 1200px
+    margin: 0 auto
+    overflow: hidden
+
+    @include breakpoint($sm)
+        padding-left: 10%
+        padding-right: 10%
+
+    @include breakpoint($md)
+        padding-left: 9%
+        padding-right: 9%
+    &-double-padding
+        padding-top: $padding2U
+        padding-bottom: $padding2U
+    &-no-padding
+        padding-top: 0
+        padding-bottom: 0
+
+
+.full-height
+    height: 100%
+
+.full-width
+    width: 100%
+    max-width: 1280px
+    margin: 0 auto
+
+.title, p.title
+    font-weight: $font-light
+    margin: 20px 0
+    font-size: 1.3rem
+    line-height: 1.5
+    min-height: 3rem
+    padding-right: 1rem
+    @include breakpoint($sm-m)
+        font-size: 1.5rem
+
+    &-black
+        color: $black-two
+    &-emphasis
+        color: $black-two
+        font-weight: 500
+
+.content
+    color: $black-two
+    &-image
+        text-align: center
+        img
+            max-width: 100%
+            max-height: 100%
+            width: 70%
+            @include breakpoint($x-xs)
+                width: 70%
+            @include breakpoint($sm-mid)
+                width: 100%
+
+.bg-white
+    background-color: $white-four
+.bg-dark
+    background-color: $dark
+.bg-darker
+    background-color: $darker
+.bg-pale-gray
+    background-color: $pale-grey
+.bg-bluegreen
+    background-color: $bluegreen-2
+
+
+.inverse-resp
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column-reverse
+    @include breakpoint($sm-mid)
+        display: block
+
+.invisible-resp
+    display: none
+    @include breakpoint($sm-mid)
+        display: block

@@ -1,0 +1,23 @@
+@import ../../general/variables
+@import ../../general/color-palette
+
+.in-line-form
+    margin: 40px 0
+    display: flex
+    input
+        width: 100%
+        min-height: 2.5rem
+        padding: 0 15px
+        border-radius: 2px 0px 0px 2px
+        &.dark
+            border: 1px solid $darker
+            background-color: $darker
+            color: $white-four-25
+
+        &.bluegreen
+            border: 1.5px solid $bluegreen
+            background-color: $bluegreen-four
+            color: $white-four-50
+    .btn
+        border-radius: 0 2px 2px 0px
+        margin: 0

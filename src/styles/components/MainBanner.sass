@@ -1,0 +1,50 @@
+@import ../general/color-palette
+@import ../general/variables
+@import ../general/mixins
+
+.MainBanner
+    background-color: $dark
+    display: block
+    width: 100%
+    height: 100vh
+    max-height: 700px
+    position: relative
+
+    @include breakpoint($sm-m)
+        height: 200vh
+        max-height: 750px
+        padding-top: 50px
+        .cols
+            width: 100%
+            height: 50%
+        .main-banner-image
+            width: 100%
+
+
+    .bannerContent
+        width: 80%
+        @include center-absolute()
+
+    .main-banner-image
+        width: 120%
+        @include center-absolute()
+
+.sponsors
+    background-color: $pale-grey-two
+    border-top: solid 1px  $white-two
+    border-bottom: solid 1px  $white-two
+    ul
+        display: flex
+        width: 100%
+        max-height: 100px
+        @include breakpoint($sm)
+            max-height: none
+            display: block
+        li
+            display: inline-flex
+            margin: 0 auto
+            padding: 0 5px
+            @include breakpoint($sm)
+                width: 33.33%
+        img
+            width: 100%

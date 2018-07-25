@@ -1,0 +1,21 @@
+.About
+    >.wrapper
+        //display: inline-table
+        @include breakpoint($sm-mid)
+            display: block
+        >.cols
+            display: inline-table
+            height: 100%
+            @include breakpoint($sm-mid)
+                display: block
+
+        .rows-50
+            display: inline-block
+            @include breakpoint($sm-mid)
+                display: block
+
+    .inverse-resp        
+        @include breakpoint($sm-mid)
+            display: flex
+            flex-wrap: wrap
+            flex-direction: column-reverse

@@ -1,0 +1,45 @@
+@import ../general/fonts
+@import ../general/variables
+@import ../general/mixins
+@import ../general/color-palette
+
+.Solutions
+    width: 100%
+    display: flex
+    @include breakpoint($sm)
+        display: block
+    p
+
+        @include breakpoint($sm)
+            font-size: 6rem        
+        &:not(.solution-emphasis)
+            font-weight: 500
+            font-size: 0.875rem
+            padding: 0 10px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: $white-two
+            @include breakpoint($sm-mid)
+                font-size: 0.75rem
+                padding: 0
+            @include breakpoint($sm)
+                font-size: 1rem
+
+    div.solution-container
+        border-right: solid 1px $pale-grey
+        display: block
+        position: relative
+        margin: 0 -0.5px
+
+        @include breakpoint($sm)
+            border-bottom: solid 1px $pale-grey
+            display: flex
+            margin: 0
+        img
+            width: 100%
+
+        div.solution-content
+            text-align: center
+            @include center-absolute()
+            @include breakpoint($sm)
+            width: 95%

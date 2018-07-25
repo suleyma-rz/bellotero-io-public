@@ -1,0 +1,59 @@
+@import ../general/color-palette
+@import ../general/variables
+@import ../general/mixins
+
+.FooterBlock
+    background-color: $dark
+    a
+        font-size: 0.875rem
+        font-weight: $font-medium
+    ul
+        margin: 26px 0 0 0
+        &:first-child
+            color: $white-two
+            margin: 0 0 10px 0
+        li
+            margin: 1rem 0
+            font-size: 0.875rem
+            color: $white-four-50
+            font-weight: 500
+            letter-spacing: 0.3px
+            @include breakpoint($sm)
+                margin: 0.5rem 0
+                font-size: 0.75rem
+            &:first-child
+                color: $white-four
+            &.app-logo
+                img
+                    width: 100%
+                    margin: 10px 0 0 0
+                    @include breakpoint($sm)
+                    margin: 5px 0 0 0
+    img
+        margin: 0.6rem 0
+
+
+.footer-info
+    background: $darker
+    padding: 13px 0
+    min-height: 40px
+    *
+        font-weight: $font-medium
+        font-size: 0.875rem
+        line-height: 1.1
+        color: $gray-light
+        .col-70
+            @include breakpoint($md)
+                width: 50%
+        .col-15
+            text-align: right
+            @include breakpoint($md)
+                width: 25%
+
+    p.cols
+        @include breakpoint($sm-mid)
+            width: 33.3%
+            text-align: center
+
+        //width: 33.3%
+        //text-align: center
